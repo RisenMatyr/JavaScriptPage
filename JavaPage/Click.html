@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+body {margin:0;}
+
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+
+.topnav a {
+float: left;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="Move.html">Animation</a>
+      <a href="Age.html">Age</a>
+      <a href="Response.html">Response Time</a>
+      <a href="Click.html">Feedback</a>
+      <a href="scare.html">Guess</a>
+</div>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <SCRIPT>
+
+
+var val=""
+var counter="0"
+themessage=new Array()
+themessage[0]="Gairren, you have an amazing body and a wonderful personality. Would you marry me?"
+themessage[1]="Wow, Gairren, I never realised what a freakin guru you were! Keep it up dude!"
+themessage[2]="You're everything I have ever wanted in a man."
+themessage[3]="I love your way with words, your pictures are fantastic, and you are modest, too, which is very rare in guys these days."
+themessage[4]="Oh Gairren, you are so amazing! Who would have thought a nice guy like yourself would be so well-hung?"
+themessage[5]="I love you. You're the greatest..."
+themessage[6]="Gairren, you are truly wonderful. I really have to meet you someday."
+themessage[7]="You know, when I get to meet you in person the first thing I am going to do is give you all my money, seeing as you are so cool."
+themessage[8]="Will you be my best man? I know you don't know me and stuff, but I would be honoured, I really would."
+themessage[9]="You look really familiar...are you a supermodel or something?"
+themessage[10]="Hey, Gairren, I was wondering...if you're not doing anything tonight...um, would you wanna see a movie?"
+themessage[11]="I never thought I could love someone I didn't know...but you have proved me wrong."
+themessage[12]="You're bad to the bone, b-b-b-b-bad, b-b-b-b-b-bad."
+themessage[13]="You are seriously the nicest guy I have ever known. The way you make me feel is just out of this world."
+themessage[14]="It's almost like you control my words, that's how much power you have over me..."
+
+x=Math.floor(Math.random()*themessage.length)
+
+function changer(){
+if(counter>=themessage[x].length){return false}
+else{
+val+=themessage[x].charAt(counter)
+document.myform.mytext.value=val
+counter++
+return false
+}
+}
+function resetit(){
+alert("Thanks for your feedback. You really are too nice.")
+document.myform.mytext.value=""
+counter="0"
+val=""
+x=Math.floor(Math.random()*themessage.length)
+}
+
+</SCRIPT>
+
+<DIV align=left>
+<TABLE align="center" height=182 cellSpacing=0 cellPadding=0 width=542 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=542 height=182><FONT face=Arial>
+      <FORM name=myform>
+      <P><SMALL>Type in here:</SMALL></FONT></P>
+      <P><FONT face=Arial><TEXTAREA onkeypress="return changer()" name=mytext rows=10 wrap=virtual cols=40></TEXTAREA><BR><BR><INPUT onclick=resetit() type=button value="Submit Feedback"></FONT></P></FORM></TD></TR></TBODY></TABLE>
+</DIV>
+
+  </body>
+</html>
